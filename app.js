@@ -1,46 +1,37 @@
 $(() => {
-    $.ajax({
-        url: "http://www.dnd5eapi.co/api/classes",
-        type: "GET",
-        
+	var face=1;
 
-    }).done(function(data) {
-        console.log("Retrieved " + data + " records from dataset!")
-        console.log(data);
-    });
-});
-// on blur event
-
-// local storage set value
-// const addClass = (addClass) => {
-//     addClass.preventDefault();
-//     let addClass = {
-//         id: "class",
-        
-//     }
-
-// }
-
-function rollDice() {
-    const dice = [...document.querySelectorAll(".die-list")];
-    dice.forEach(die => {
-      toggleClasses(die);
-      die.dataset.roll = getRandomNumber(1, 6);
-    });
+var show = function() {
+  $('.cube1').attr('class', 'cube cube1 show'+face);
+  if(face==6) {
+    face=1;
+  } else {
+    face++; 
   }
-  
-  function toggleClasses(die) {
-    die.classList.toggle("odd-roll");
-    die.classList.toggle("even-roll");
+};
+
+var show2 = function() {
+  $('.cube2').attr('class', 'cube cube2 show'+face);
+  if(face==6) {
+    face=1;
+  } else {
+    face++; 
   }
-  
-  function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  
-  document.getElementById("roll-button").addEventListener("click", rollDice);
+};
+
+$('.cube1').on('click', show);
+$('.cube2').on('click', show2);
+
+$.ajax({
+		url: "http://www.dnd5eapi.co/api/classes",
+		type: "GET",
+	}).done(function(data) {
+		console.log("Retrieved " + data + " records from dataset!")
+		console.log(data)
+    })
+    
+})
+
 
 
 // show dice animated or show dice spinning without numbers landing on number shown or choosing math.random showing spinning dice.
