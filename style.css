@@ -14,13 +14,19 @@ body {
 
 textarea {
   font-size: 12px;
-  text-align: left;
   max-width: 600px;
   border-radius: 10px;
   padding: 10px;
   resize: none;
   overflow: hidden;
   max-height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.classinfo {
+  font-size: 12px;
+  display: flex;
 }
 
 .charsheet {
@@ -30,7 +36,8 @@ textarea {
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  
+  display: flex;
+  flex-flow: row;
 }
 
 input[type='checkbox'] {
@@ -61,23 +68,22 @@ input[type='checkbox'] {
   border-radius:30px;
   width:198px;
   height:198px;
-  position:absolute;
+  position: absolute;
   background-image: url(Dice.png);
   background-repeat:no-repeat;
   background-color: white;
-  float: right;
 }
 
-.front  { transform: rotateY(   0deg ) translateZ( 100px ); background-position: -12px -12px; }
-.back   { transform: rotateX( 180deg ) translateZ( 100px ); background-position: -463px -239px; }
-.right  { transform: rotateY(  90deg ) translateZ( 100px ); background-position: -236px -12px; }
-.left   { transform: rotateY( -90deg ) translateZ( 100px ); background-position: -241px -235px; }
-.top    { transform: rotateX(  90deg ) translateZ( 100px ); background-position: -459px -12px; }
-.bottom { transform: rotateX( -90deg ) translateZ( 100px ); background-position: -12px -235px; }
+.front  {transform: rotateY(0deg) translateZ(100px); background-position: -12px -12px;}
+.back   {transform: rotateX(180deg) translateZ(100px); background-position: -463px -239px;}
+.right  {transform: rotateY(90deg) translateZ(100px); background-position: -236px -12px; }
+.left   {transform: rotateY(-90deg) translateZ(100px); background-position: -241px -235px; }
+.top    {transform: rotateX(90deg ) translateZ(100px); background-position: -459px -12px; }
+.bottom {transform: rotateX(-90deg) translateZ(100px); background-position: -12px -235px;}
 
-.cube.show1 { transform: translateZ( -100px ) rotateY(    0deg ); }
-.cube.show2 { transform: translateZ( -100px ) rotateX( -180deg ); }
-.cube.show3 { transform: translateZ( -100px ) rotateY(  -90deg ); }
-.cube.show4 { transform: translateZ( -100px ) rotateY(   90deg ); }
-.cube.show5 { transform: translateZ( -100px ) rotateX(  -90deg ); }
-.cube.show6 { transform: translateZ( -100px ) rotateX(   90deg ); }
+.cube.show1 { transform: translateZ(-100px) rotateY(0deg);}
+.cube.show2 { transform: translateZ(-100px) rotateX(-180deg);}
+.cube.show3 { transform: translateZ(-100px) rotateY(-90deg);}
+.cube.show4 { transform: translateZ(-100px) rotateY(90deg);}
+.cube.show5 { transform: translateZ(-100px) rotateX(-90deg);}
+.cube.show6 { transform: translateZ(-100px) rotateX(90deg);}
