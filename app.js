@@ -4,27 +4,20 @@ $(() => {
 
         const userInput = $('input[type="text"]').val();
 
-        const promise = $.ajax({
+        $.ajax({
             url:'https://api.open5e.com/classes/' + userInput
         }).then(
             (data) => {
-            $("#classinfo").text(data.prof_skills)
+            $('#overview').text(data.desc)
+            $('#startingskills').text(data.prof_skills)
+            $('#startinghp').text(data.hp_at_1st_level)
+            $('#equipment').text(data.equipment)
         },
         (data) => {
             console.log("Something went wrong")
         }
         )
     })
-
-// const apiUrl = 'https://api.open5e.com/classes'
-//    async function getClass() {
-//        const response = await fetch(apiUrl);
-//        const data = await response.json()
-//        console.log(data) 
-//        $("#classinfo").html(data.json);
-//    }
-   
-// getClass();
 
 var face = 1;
 
