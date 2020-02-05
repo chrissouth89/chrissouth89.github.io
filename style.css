@@ -43,6 +43,13 @@ textarea {
   display: flex;
   flex-flow: row;
 }
+#stay {
+  position: relative;
+  font-style: italic;
+}
+#classinfo {
+  font-size: 14px;
+}
 
 input[type='checkbox'] {
   cursor: pointer;
