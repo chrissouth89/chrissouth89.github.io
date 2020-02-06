@@ -4,7 +4,7 @@
 Interactive D&amp;D Character sheet with dice roller and auto filling information.
 
 # Objective:
-Use an API to call various information to aid in character creation of a dungeons and dragons character.
+Use the open source "https://api.open5e.com" API to call various information to aid in character creation of a dungeons and dragons character.
 
 # Elements: 
   * Input field for class.
