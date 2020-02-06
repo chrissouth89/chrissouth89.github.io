@@ -43,10 +43,11 @@ textarea {
   display: flex;
   flex-flow: row;
 }
-#stay {
-  position: relative;
-  font-style: italic;
+span {
+  font-weight: normal;
+  font-size: 16px;
 }
+
 #classinfo {
   font-size: 14px;
 }
