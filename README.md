@@ -18,3 +18,7 @@ Use an API to call various information to aid in character creation of a dungeon
 * Click:
   * On click dice will roll and show a random value.
 
+# Strech Goals:
+  * Get working local storage.
+  * Clean up page to reduce clutter.
+  * Pull race, and background data as well.
