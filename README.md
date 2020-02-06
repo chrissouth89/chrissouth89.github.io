@@ -8,8 +8,8 @@ Use an API to call various information to aid in character creation of a dungeon
 
 # Elements: 
   * Input field for class.
-  * Type class name in input field.
-  
+    * Type class name in input field.
+
 * Buttons: 
   * Submit class input to retrieve class information.
 
